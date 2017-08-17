@@ -46,6 +46,7 @@ void QuickSort(T rawdata[], int start, int end)
 1. Partition(T rawdata[], int start, int end)
 2. Swap(T &lhs, T &rhs)
 3. randomChoose(int start, int end)
+4. printArray(T arr[], int length)   
 */
 
 template<typename T>
@@ -79,8 +80,6 @@ int randomChoose(int start, int end)
     return rand() % (end - start + 1) + start;
 }
 
-template <typename T,unsigned S>
-inline unsigned arraysize(const T (&v)[S]) { return S; }
 
 template<typename T>
 void printArray(T arr[], int length) 
@@ -98,21 +97,3 @@ int main()
     QuickSort(a, 0, length - 1);
     printArray(a, length); 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
