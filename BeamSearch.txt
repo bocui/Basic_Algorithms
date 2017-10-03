@@ -1,4 +1,4 @@
-Beam Search can be used in Seq2Seq
+Beam Search can be used in Seq2Seq model in NLP, especially NLG problem. 
 
 We need to set the beam_size-K. 
 
