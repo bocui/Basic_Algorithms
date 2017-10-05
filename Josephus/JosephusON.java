@@ -14,5 +14,15 @@ public Node josephusON(Node head, int m) {
 	cur = cur.next;
     }
     int pos = getLive(size, m);
+    while (--pos != 0) {
+	head = head.next;
+    }
+}
+
+public int getLive(int size, int m) {
+    if (size == 1) {
+	return 1;
+    }
+    return (getLive(size-1, m) + m - 1) % size + 1;
 }
 
