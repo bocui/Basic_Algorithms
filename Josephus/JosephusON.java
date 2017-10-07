@@ -17,6 +17,8 @@ public Node josephusON(Node head, int m) {
     while (--pos != 0) {
 	head = head.next;
     }
+    head.next = head;
+    return head;
 }
 
 public int getLive(int size, int m) {
