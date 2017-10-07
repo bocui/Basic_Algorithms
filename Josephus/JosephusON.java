@@ -21,6 +21,8 @@ public Node josephusON(Node head, int m) {
     return head;
 }
 
+
+// function to get the position of to be killed
 public int getLive(int size, int m) {
     if (size == 1) {
 	return 1;
