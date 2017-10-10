@@ -6,13 +6,13 @@ public int fibON(int n) {
 	return 1;
     }
     
-    int res = 0;
+    int tmp = 1;
     int pre = 1;
-    int prepre = 1;
+    int res = 1;
     for (int i = 3; i < n; i++) {
-        pre = res;
+        tmp = res;
 	res = res + pre;
-        res = prepre + pre;
-	pre = res;
+	pre = tmp;
     }
+    return res;
 }
