@@ -11,3 +11,9 @@ class Graph:
     self.edges[from_node].append(to_node)
     self.edges[to_node].append(from_node)
     self.distances[(from_node, to_node)] = distance
+
+def dijsktra(graph, initial):
+  visited = {initial: 0}
+  path = {}
+
+  nodes = set(graph.nodes)
