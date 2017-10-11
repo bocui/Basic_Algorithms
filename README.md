@@ -4,3 +4,4 @@ This repository is for some basic algorithm:
 3. BeamSearch <br>
 4. Dynamic programming <br>
 5. Josephus  <br>
+6. Dijkstra  <br>
