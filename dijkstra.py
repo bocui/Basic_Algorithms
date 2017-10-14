@@ -4,22 +4,55 @@ class Graph:
 			      edges     :  defaultdict
 			      distance  :  dictionary}
 """
-  def __init__(self):
-    self.nodes = set()
-    self.edges = defaultdict(list)
-    self.distances = {}
+    def __init__(self):
+        self.nodes = set()
+        self.edges = defaultdict(list)
+        self.distances = {}
 
 # Graph's necessary operations: {add_node, add_edge}
-  def add_node(self, value):
-    self.nodes.add(value)
+    def add_node(self, value):
+        self.nodes.add(value)
 
-  def add_edge(self, from_node, to_node, distance):
-    self.edges[from_node].append(to_node)
-    self.edges[to_node].append(from_node)
-    self.distances[(from_node, to_node)] = distance
+    def add_edge(self, from_node, to_node, distance):
+        self.edges[from_node].append(to_node)
+        self.edges[to_node].append(from_node)
+        self.distances[(from_node, to_node)] = distance
+
 
 def dijsktra(graph, initial):
-  visited = {initial: 0}
-  path = {}
+"""
+graph  : the graph
+initial : the begining node
 
-  nodes = set(graph.nodes)
+
+{visited} : the traversed node so far and its shortest distance, the dictionary structure.  
+{node} : the node has not been traversed
+# path    : the dictionary structure. 
+"""
+    visited = {initial: 0}
+    path = {}
+  
+    nodes = set(graph.nodes)
+    
+    while nodes: 
+	min_node = None
+	for node in nodes:
+	    if node in visited: 
+		if min_node is None:
+		    min_node = node
+		elif visited[node] < visited[min_node]
+		    min_node = node
+# In this condition, the min_node is None means:
+#    1. nodes is empty
+#    2. node in nodes is not in visited. 
+	if min_node is None:
+	    break
+
+	nodes.remove(min_node)
+
+
+
+
+
+
+
