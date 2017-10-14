@@ -1,9 +1,15 @@
 class Graph:
+"""
+# Graph's necessary element: {nodes     :  set, 
+			      edges     :  defaultdict
+			      distance  :  dictionary}
+"""
   def __init__(self):
     self.nodes = set()
     self.edges = defaultdict(list)
     self.distances = {}
 
+# Graph's necessary operations: {add_node, add_edge}
   def add_node(self, value):
     self.nodes.add(value)
 
