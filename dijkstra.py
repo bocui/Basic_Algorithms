@@ -38,7 +38,9 @@ initial : the begining node
     while nodes: 
 	min_node = None
 	for node in nodes:
-	    if node in visited: 
+	    if node in visited:
+	# in the below condition: 
+	# node is in visited, so the min_node is also in visited 
 		if min_node is None:
 		    min_node = node
 		elif visited[node] < visited[min_node]
