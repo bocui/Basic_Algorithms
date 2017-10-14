@@ -1,3 +1,4 @@
+# The reference of this code: https://gist.github.com/econchick/4666413
 class Graph:
 """
 # Graph's necessary element: {nodes     :  set, 
