@@ -25,9 +25,9 @@ graph  : the graph
 initial : the begining node
 
 
-{visited} : the traversed node so far and its shortest distance, the dictionary structure.  
-{node} : the node has not been traversed
-# path    : the dictionary structure. 
+{visited}   : the traversed node so far and its shortest distance, the dictionary structure.  
+{node}      : the node has not been traversed
+{path}      : the dictionary structure. 
 """
     visited = {initial: 0}
     path = {}
@@ -49,6 +49,15 @@ initial : the begining node
 	    break
 
 	nodes.remove(min_node)
+	current_weight = visited[min_node]
+
+	for edge in graph.edges[min_node]:
+	    weight = current_weight + graph.distance[(min_node, edge)]
+	    if edge not in visited or weight < visited[edge]:
+		visited[edge] = weight
+		path[edge] = min_node
+
+    return visited, path
 
 
 
