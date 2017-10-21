@@ -5,3 +5,4 @@ This repository is for some basic algorithm:
 4. Dynamic programming <br>
 5. Josephus  <br>
 6. Dijkstra  <br>
+7. BIGDATA <br>
