@@ -6,3 +6,4 @@ This repository is for some basic algorithm:
 5. Josephus  <br>
 6. Dijkstra  <br>
 7. BIGDATA <br>
+8. Consistent Hashingf <br>
